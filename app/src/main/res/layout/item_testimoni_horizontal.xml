@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:layout_gravity="center"
+            android:outlineSpotShadowColor="@color/white"
+            app:cardCornerRadius="14dp"
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/ivTestimoni"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iv_testimoni" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvPelanggan"
+            style="@style/TextView.PoppinsMedium14sp202020"
+            android:text="Abdi Gunawan"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvKomentar"
+            style="@style/TextView.PoppinsReguler9sp8D92A3"
+            android:text="Komentarnya Disini"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

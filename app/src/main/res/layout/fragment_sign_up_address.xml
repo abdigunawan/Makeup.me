@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".ui.auth.signin.SigninFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff"
+        android:paddingTop="26dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        tools:context=".ui.auth.signin.SigninFragment">
+
+
+        <TextView
+            android:layout_marginTop="16dp"
+            style="@style/TextView.PoppinsRegular16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No. HP" />
+
+        <EditText
+            android:layout_marginTop="6dp"
+            android:padding="10dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            style="@style/EditText.PoppinsRegular14sp8D92A3"
+            android:hint="Masukkan Nomor hpmu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            style="@style/TextView.PoppinsRegular16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat" />
+
+        <EditText
+            android:layout_marginTop="6dp"
+            android:padding="10dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            style="@style/EditText.PoppinsRegular14sp8D92A3"
+            android:hint="Masukkan Alamat lengkapmu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            style="@style/TextView.PoppinsRegular16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nomor Rumah" />
+
+        <EditText
+            android:layout_marginTop="6dp"
+            android:padding="10dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            style="@style/EditText.PoppinsRegular14sp8D92A3"
+            android:hint="Masukkan Nomor Rumahmu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            style="@style/TextView.PoppinsRegular16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kota" />
+
+        <EditText
+            android:layout_marginTop="6dp"
+            android:padding="10dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            style="@style/EditText.PoppinsRegular14sp8D92A3"
+            android:hint="Pilih Kotamu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/btnSignupNow"
+            style="@style/Button.Primary"
+            android:text="Daftar Sekarang"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

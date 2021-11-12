@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailMuaActivity">
+
+    <ImageView
+        android:id="@+id/ivPaketMua"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_paket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle_20_fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvNamaPaket"
+            style="@style/TextView.PoppinsSemiBold16sp8020202"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18dp"
+            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content"
+            android:text="Paket Wisuda"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvDesc"
+            style="@style/TextView.PoppinsRegular14sp8D92A3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Paket ini ditujukan kepada mahasiswi yang akan menghadiri acara wisuda. paket yang ditawarkan tergolong cukup murah apalagi untuk kalangan mahasiswa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produk Makeup"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            style="@style/TextView.PoppinsRegular14sp202020"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/TextView.PoppinsRegular14sp202020"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            android:text="Deskripsi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamaPaket" />
+
+        <TextView
+            android:id="@+id/tvIngredients"
+            style="@style/TextView.PoppinsRegular14sp8D92A3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="wardah beauty, dan lain lain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <Button
+            android:id="@+id/btnOrderNow"
+            style="@style/Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp
+"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="27dp"
+            android:text="Pesan Sekarang"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvTotal"
+            app:layout_constraintTop_toBottomOf="@+id/tvIngredients" />
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/TextView.PoppinsRegular14sp8D92A3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga : "
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnOrderNow" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            style="@style/TextView.PoppinsRegular18sp020202"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="IDR 29.000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
