@@ -8,11 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.abdigunawan.makeupme.R
-import com.abdigunawan.makeupme.ui.MainActivity
+import com.abdigunawan.makeupme.ui.auth.AuthActivity
 import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
-import kotlinx.android.synthetic.main.fragment_detail_mua.*
 import kotlinx.android.synthetic.main.fragment_detail_paket.*
-import kotlinx.android.synthetic.main.fragment_sign_up_address.*
 
 class DetailPaketFragment : Fragment() {
 
@@ -22,5 +20,17 @@ class DetailPaketFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_detail_paket, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        btnOrderNow.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(R.id.action_fragmentDetailPaket_to_fragmentPembayaran, null)
+
+            (activity as DetailMuaActivity).toolbarPayment()
+        }
+
     }
 }

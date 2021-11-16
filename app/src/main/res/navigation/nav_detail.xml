@@ -20,7 +20,18 @@
         android:id="@+id/fragmentDetailPaket"
         android:name="com.abdigunawan.makeupme.ui.detail.paket.DetailPaketFragment"
         tools:layout="@layout/fragment_detail_paket">
+        <action
+            android:id="@+id/action_fragmentDetailPaket_to_fragmentPembayaran"
+            app:destination="@id/fragmentPembayaran"
+            app:popUpTo="@id/fragmentPembayaran" />
     </fragment>
+
+    <fragment
+        android:id="@+id/fragmentPembayaran"
+        android:name="com.abdigunawan.makeupme.ui.detail.paket.PaymentFragment"
+        tools:layout="@layout/fragment_payment">
+    </fragment>
+
 
 
 </navigation>

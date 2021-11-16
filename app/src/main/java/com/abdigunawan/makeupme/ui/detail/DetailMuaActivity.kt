@@ -2,6 +2,7 @@ package com.abdigunawan.makeupme.ui.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import com.abdigunawan.makeupme.R
@@ -23,6 +24,10 @@ class DetailMuaActivity : AppCompatActivity() {
     fun toolbarDetailMua() {
         toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_arrow_back_fff, null)
         toolbar.setNavigationOnClickListener { onBackPressed() }
+    }
+
+    fun toolbarPayment() {
+        toolbar.visibility = View.GONE
     }
 
 }
