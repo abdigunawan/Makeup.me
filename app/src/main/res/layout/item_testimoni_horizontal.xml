@@ -7,49 +7,66 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
             android:layout_width="match_parent"
             android:layout_height="134dp"
             android:layout_gravity="center"
+            android:elevation="10dp"
             android:outlineSpotShadowColor="@color/white"
             app:cardCornerRadius="14dp"
-            android:elevation="10dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/ivTestimoni"
                 android:layout_width="match_parent"
-                android:layout_gravity="center"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:scaleType="centerCrop"
                 android:src="@drawable/iv_testimoni" />
-
         </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/tvPelanggan"
             style="@style/TextView.PoppinsMedium14sp202020"
-            android:text="Abdi Gunawan"
-            android:layout_marginTop="6dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Abdi Gunawan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView2" />
 
         <TextView
             android:id="@+id/tvKomentar"
             style="@style/TextView.PoppinsReguler9sp8D92A3"
-            android:text="Komentarnya Disini"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginBottom="6dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Komentarnya Disini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPelanggan" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/tvtanggalTestimoni"
+            style="@style/TextView.PoppinsReguler9sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Tanggal Disini"
+            app:layout_constraintBottom_toTopOf="@+id/tvKomentar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPelanggan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

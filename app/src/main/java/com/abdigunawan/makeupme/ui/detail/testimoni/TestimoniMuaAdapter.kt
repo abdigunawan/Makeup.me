@@ -33,6 +33,7 @@ class TestimoniMuaAdapter(
             itemView.apply {
                 tvPelanggan.text = data.pelanggan
                 tvKomentar.text = data.komentar
+                tvtanggalTestimoni.text = data.tanggal
 
 //                Glide.with(context)
 //                    .load(data.src)

@@ -38,14 +38,14 @@ class TestimoniMuaFragment : Fragment(),TestimoniMuaAdapter.ItemAdapterCallback 
 
     fun initDataDummy() {
         menuArrayList = ArrayList()
-        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤"))
-        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤"))
-        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤"))
-        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤"))
-        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤"))
-        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤"))
-        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤"))
-        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤"))
+        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤","16 Nov 2021"))
+        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤","16 Nov 2021"))
+        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤","16 Nov 2021"))
+        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤","16 Nov 2021"))
+        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤","16 Nov 2021"))
+        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤","16 Nov 2021"))
+        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤","16 Nov 2021"))
+        menuArrayList.add(MuaTestimoniModel("Abdi Gunawan", "", "Komentar : terimakasih kak suka banget sama produknya\uD83D\uDE18❤","16 Nov 2021"))
     }
 
     override fun onClick(v: View, data: MuaTestimoniModel) {
