@@ -21,7 +21,8 @@
 
         <action
             android:id="@+id/action_signup_address"
-            app:destination="@id/fragmentSignupAddress"/>
+            app:destination="@id/fragmentSignupAddress"
+            app:popUpTo="@id/fragmentSignupAddress" />
 
     </fragment>
 
@@ -31,7 +32,8 @@
 
         <action
             android:id="@+id/action_signup_success"
-            app:destination="@id/fragmentSignupSuccess"/>
+            app:destination="@id/fragmentSignupSuccess"
+            app:popUpTo="@id/fragmentSignupSuccess" />
 
     </fragment>
 
