@@ -23,5 +23,5 @@
         app:subtitle="Temukan Wajah Terbaikmu"
         app:subtitleTextAppearance="@style/TextView.PoppinsRegular14sp8D92A3"
         app:title="Masuk"
-        app:titleTextAppearance="@style/TextView.PoppinsRegular22sp020202" />
+        app:titleTextAppearance="@style/TextView.PoppinsSemi22sp020202" />
 </androidx.constraintlayout.widget.ConstraintLayout>

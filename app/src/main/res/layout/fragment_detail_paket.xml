@@ -94,8 +94,7 @@
             style="@style/Button.Primary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="45dp
-"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="41dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="27dp"

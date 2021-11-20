@@ -32,9 +32,12 @@
     <TextView
         android:id="@+id/tvAlamatMua"
         style="@style/TextView.PoppinsLight14spfff"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="64dp"
+        android:gravity="center"
         android:text="Jln. Perintis Kemerdekaan 7, Makassar"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,15 +67,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTeleponMua" />
 
+    <Button
+        android:id="@+id/btnChatMua"
+        style="@style/Button.ChatMua"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="14dp"
+        android:text="Hubungi Mua"
+        android:textAllCaps="false"
+        android:textColor="#FE9BB3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbMua" />
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/shape_rectangle_40_fff"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_rectangle_20_fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbMua">
+        app:layout_constraintTop_toBottomOf="@+id/btnChatMua">
 
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout

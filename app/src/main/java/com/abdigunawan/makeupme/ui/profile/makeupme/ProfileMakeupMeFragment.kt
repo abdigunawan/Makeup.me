@@ -1,5 +1,6 @@
 package com.abdigunawan.makeupme.ui.profile.makeupme
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.ProfileMenuModel
+import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
 import com.abdigunawan.makeupme.ui.profile.ProfileMenuAdapter
 import kotlinx.android.synthetic.main.fragment_profile_account.*
 
@@ -45,6 +47,11 @@ class ProfileMakeupMeFragment : Fragment(),ProfileMenuAdapter.ItemAdapterCallbac
     }
 
     override fun onClick(v: View, data: ProfileMenuModel) {
+        if (data.title == "Tentang Makeup.me") {
+            val about = Intent(activity, AboutActivity::class.java)
+            startActivity(about)
+        }
+
         Toast.makeText(context, "Ini menu yang kamu klik "+ data.title, Toast.LENGTH_SHORT).show()
     }
 
