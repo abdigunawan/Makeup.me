@@ -34,6 +34,7 @@ class TestimoniMuaAdapter(
                 tvPelanggan.text = data.pelanggan
                 tvKomentar.text = data.komentar
                 tvtanggalTestimoni.text = data.tanggal
+                rbMua.rating = data.rating
 
 //                Glide.with(context)
 //                    .load(data.src)

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#fff"
     app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true"
@@ -50,22 +51,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginBottom="8dp"
             android:text="Komentarnya Disini"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPelanggan" />
+            app:layout_constraintTop_toBottomOf="@+id/rbMua" />
 
         <TextView
             android:id="@+id/tvtanggalTestimoni"
             style="@style/TextView.PoppinsReguler9sp8D92A3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:text="Tanggal Disini"
             app:layout_constraintBottom_toTopOf="@+id/tvKomentar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvPelanggan" />
+            app:layout_constraintTop_toTopOf="@+id/rbMua"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RatingBar
+            android:id="@+id/rbMua"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPelanggan" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
