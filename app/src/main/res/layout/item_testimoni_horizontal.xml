@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#fff"
     app:cardCornerRadius="10dp"
+    android:outlineSpotShadowColor="#8D92A3"
     app:cardUseCompatPadding="true"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">

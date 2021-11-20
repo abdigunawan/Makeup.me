@@ -21,15 +21,25 @@
         android:name="com.abdigunawan.makeupme.ui.detail.paket.DetailPaketFragment"
         tools:layout="@layout/fragment_detail_paket">
         <action
-            android:id="@+id/action_fragmentDetailPaket_to_fragmentPembayaran"
-            app:destination="@id/fragmentPembayaran"
-            app:popUpTo="@id/fragmentPembayaran" />
+            android:id="@+id/action_fragmentDetailPaket_to_fragmentCustomizeOrder"
+            app:destination="@id/fragmentCustomizeOrder"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
     </fragment>
 
     <fragment
         android:id="@+id/fragmentPembayaran"
         android:name="com.abdigunawan.makeupme.ui.detail.paket.PaymentFragment"
         tools:layout="@layout/fragment_payment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCustomizeOrder"
+        android:name="com.abdigunawan.makeupme.ui.detail.paket.CustomizeOrderFragment"
+        tools:layout="@layout/fragment_customize_order">
+        <action
+            android:id="@+id/action_fragmentCustomizeOrder_to_fragmentPembayaran"
+            app:destination="@id/fragmentPembayaran"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
     </fragment>
 
 
