@@ -1,4 +1,4 @@
-package com.abdigunawan.foodmarketkotlin.model.dummy
+package com.abdigunawan.makeupme.model.dummy
 
 class HomeModel(title:String, alamat:String, src:String, rating:Float) {
 

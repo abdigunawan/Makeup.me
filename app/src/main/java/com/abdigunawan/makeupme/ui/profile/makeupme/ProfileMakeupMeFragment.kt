@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.ProfileMenuModel
-import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
 import com.abdigunawan.makeupme.ui.profile.ProfileMenuAdapter
 import kotlinx.android.synthetic.main.fragment_profile_account.*
 
@@ -34,8 +33,8 @@ class ProfileMakeupMeFragment : Fragment(),ProfileMenuAdapter.ItemAdapterCallbac
 
         var adapter = ProfileMenuAdapter(menuArrayList, this)
         var layoutManager : RecyclerView.LayoutManager = LinearLayoutManager(activity)
-        rcList.layoutManager = layoutManager
-        rcList.adapter = adapter
+        rcList2.layoutManager = layoutManager
+        rcList2.adapter = adapter
     }
 
     fun initDataDummy() {

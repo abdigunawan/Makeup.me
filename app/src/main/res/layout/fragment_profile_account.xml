@@ -6,7 +6,7 @@
     tools:context=".ui.profile.akun.ProfileAccountFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcList"
+        android:id="@+id/rcList2"
         android:paddingTop="16dp"
         android:background="@color/white"
         android:layout_width="match_parent"

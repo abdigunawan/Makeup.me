@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.abdigunawan.foodmarketkotlin.model.dummy.HomeModel
 import com.abdigunawan.makeupme.R
+import com.abdigunawan.makeupme.model.dummy.HomeModel
 import kotlinx.android.synthetic.main.item_home_horizontal.view.*
 
 class HomeAdapter (

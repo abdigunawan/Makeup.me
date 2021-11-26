@@ -32,8 +32,8 @@ class ProfileAccountFragment : Fragment(),ProfileMenuAdapter.ItemAdapterCallback
 
         var adapter = ProfileMenuAdapter(menuArrayList, this)
         var layoutManager : RecyclerView.LayoutManager = LinearLayoutManager(activity)
-        rcList.layoutManager = layoutManager
-        rcList.adapter = adapter
+        rcList2.layoutManager = layoutManager
+        rcList2.adapter = adapter
     }
 
     fun initDataDummy() {

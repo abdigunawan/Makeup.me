@@ -31,8 +31,8 @@ class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback {
         initDataDummy()
         var adapter = PaketMuaAdapter(paketList, this)
         var layoutManager : RecyclerView.LayoutManager = GridLayoutManager(context,2)
-        rcList.layoutManager = layoutManager
-        rcList.adapter = adapter
+        rcList2.layoutManager = layoutManager
+        rcList2.adapter = adapter
 
     }
     fun initDataDummy(){
