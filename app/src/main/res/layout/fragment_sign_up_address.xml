@@ -27,13 +27,14 @@
             android:text="No. HP" />
 
         <EditText
-            android:layout_marginTop="6dp"
-            android:padding="10dp"
-            android:background="@drawable/shape_rectangle_outline_8_020202"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
-            android:hint="Masukkan Nomor hpmu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Masukkan Nomor hpmu"
+            android:inputType="textShortMessage"
+            android:padding="10dp" />
 
         <TextView
             android:layout_marginTop="16dp"
@@ -43,13 +44,13 @@
             android:text="Alamat" />
 
         <EditText
-            android:layout_marginTop="6dp"
-            android:padding="10dp"
-            android:background="@drawable/shape_rectangle_outline_8_020202"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
-            android:hint="Masukkan Alamat lengkapmu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Masukkan Alamat lengkapmu"
+            android:padding="10dp" />
         <TextView
             android:layout_marginTop="16dp"
             style="@style/TextView.PoppinsRegular16sp020202"

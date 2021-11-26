@@ -33,13 +33,13 @@
             android:text="Nama Lengkap" />
 
         <EditText
-            android:layout_marginTop="6dp"
-            android:padding="10dp"
-            android:background="@drawable/shape_rectangle_outline_8_020202"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
-            android:hint="Masukkan nama lengkapmu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Masukkan nama lengkapmu"
+            android:padding="10dp" />
 
         <TextView
             android:layout_marginTop="16dp"
@@ -49,13 +49,14 @@
             android:text="Email" />
 
         <EditText
-            android:layout_marginTop="6dp"
-            android:padding="10dp"
-            android:background="@drawable/shape_rectangle_outline_8_020202"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
-            android:hint="Masukkan Emailmu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Masukkan Emailmu"
+            android:inputType="textShortMessage"
+            android:padding="10dp" />
 
         <TextView
             android:layout_marginTop="16dp"
@@ -65,14 +66,14 @@
             android:text="Password" />
 
         <EditText
-            android:inputType="textPassword"
-            android:layout_marginTop="6dp"
-            android:padding="10dp"
-            android:background="@drawable/shape_rectangle_outline_8_020202"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
-            android:hint="Buat Passwordmu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Buat Passwordmu"
+            android:inputType="textShortMessage|textPassword"
+            android:padding="10dp" />
 
         <Button
             android:id="@+id/btnContinue"
