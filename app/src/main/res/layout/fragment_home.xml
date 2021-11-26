@@ -17,9 +17,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="160dp"
             android:text="Mulai Mencari MUA yang Cocok \nDengan Seleramu !"
             android:textAlignment="textStart"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
@@ -27,7 +29,7 @@
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:src="@drawable/ic_women"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -73,8 +75,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/rcList" />
 
             <TextView
-                android:id="@+id/btnShowPopuler2"
-                style="@style/TextView.PoppinsMedium14sp202020"
+                android:id="@+id/btnShowNew"
+                style="@style/TextView.PoppinsLight14spfff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
@@ -111,7 +113,7 @@
 
             <TextView
                 android:id="@+id/btnShowPopuler"
-                style="@style/TextView.PoppinsMedium14sp202020"
+                style="@style/TextView.PoppinsLight14spfff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
@@ -142,10 +144,10 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="182dp"
+            android:layout_width="190dp"
             android:layout_height="41dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
             android:src="@drawable/ic_makeupme"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

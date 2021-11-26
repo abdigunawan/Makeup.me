@@ -49,13 +49,14 @@
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_auth.xml" value="0.536" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_detail_mua.xml" value="0.264" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_detail_paket.xml" value="0.25" />
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_lihat_semua_mua.xml" value="0.264" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_on_boarding.xml" value="0.176" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_customize_order.xml" value="0.2" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_detail_mua.xml" value="0.264" />
-        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_detail_paket.xml" value="0.264" />
-        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_home.xml" value="0.536" />
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_detail_paket.xml" value="0.4" />
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_home_populer.xml" value="0.4" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_jadwal_mua.xml" value="0.136" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_notifications.xml" value="0.25" />
@@ -74,7 +75,8 @@
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_home_vertical.xml" value="0.4" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_jadwal_vertical.xml" value="0.4" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_menu_profile.xml" value="0.25" />
-        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_paket_horizontal.xml" value="0.4" />
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_paket_horizontal.xml" value="0.2" />
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_seeall_vertical.xml" value="0.4" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_testimoni_horizontal.xml" value="0.2" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/layout_toolbar.xml" value="0.264" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/layout_toolbar_detail.xml" value="0.25" />

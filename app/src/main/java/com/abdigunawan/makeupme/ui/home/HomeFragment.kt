@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.model.dummy.HomeModel
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
+import com.abdigunawan.makeupme.ui.seeall.LihatSemuaMuaActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback {
@@ -64,6 +65,18 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback {
         muaList2.add(HomeModel("Adella Lagi","Perintis Kemerdekaan VII","",4.5f))
         muaList2.add(HomeModel("Bukanmi Adella Ini","Perintis Kemerdekaan VII","",4.5f))
 
+
+        btnShowPopuler.setOnClickListener{
+            val lihatsemuamua = Intent(activity, LihatSemuaMuaActivity::class.java)
+            lihatsemuamua.putExtra("title", "Populer Disekitarmu")
+            startActivity(lihatsemuamua)
+        }
+
+        btnShowNew.setOnClickListener{
+            val lihatsemuamua = Intent(activity, LihatSemuaMuaActivity::class.java)
+            lihatsemuamua.putExtra("title", "Terbaru Disekitarmu")
+            startActivity(lihatsemuamua)
+        }
 
 
     }

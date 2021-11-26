@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
         <activity
-            android:name=".ui.profile.makeupme.AboutActivity"
+            android:name=".ui.seeall.LihatSemuaMuaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.detail.paket.detailpaket.DetailPaketActivity"
+            android:name=".ui.profile.makeupme.AboutActivity"
             android:exported="false" />
         <activity
             android:name=".ui.detail.DetailMuaActivity"
