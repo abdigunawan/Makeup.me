@@ -3,6 +3,7 @@ package com.abdigunawan.makeupme.ui.detail
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import com.abdigunawan.makeupme.R

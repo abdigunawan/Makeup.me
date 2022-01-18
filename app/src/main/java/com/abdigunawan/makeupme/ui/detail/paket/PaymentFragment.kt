@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.abdigunawan.makeupme.R
+import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
+import kotlinx.android.synthetic.main.fragment_payment.*
 
 class PaymentFragment : Fragment() {
 
@@ -17,4 +20,14 @@ class PaymentFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_payment, container, false)
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        btnCheckout.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(R.id.action_fragmentPembayaran_to_fragmentPembayaranSukses, null)
+
+            (activity as DetailMuaActivity).toolbarPayment()
+        }
+    }
 }

@@ -4,11 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.abdigunawan.foodmarketkotlin.utils.Helpers.formatPrice
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.MuaJadwalModel
 import kotlinx.android.synthetic.main.item_jadwal_vertical.view.*
-import kotlinx.android.synthetic.main.item_paket_horizontal.view.*
 
 class JadwalMuaAdapter(
     private val listData: List<MuaJadwalModel>,

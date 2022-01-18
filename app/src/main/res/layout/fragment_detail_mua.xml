@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:background="#fff"
                     app:tabIndicatorColor="#020202"
-                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorFullWidth="true"
                     app:tabMode="fixed"
                     app:tabSelectedTextColor="#020202"
                     app:tabTextAppearance="@style/Tab" />

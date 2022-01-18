@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="100dp"
+    android:orientation="vertical"
+    tools:context=".ui.detail.paket.PaymentSuccessFragment">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="251dp"
+        android:id="@+id/ivLogo"
+        android:src="@drawable/ic_success_order" />
+
+    <TextView
+        android:text="Pesanan Di Proses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        style="@style/TextView.PoppinsRegular20sp020202"/>
+
+    <TextView
+        android:text="Yeahh, Dikit Lagi nih Pesanan kakak sedang di konfirmasi Tunggu info selanjutnya yah dari mua nya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:textAlignment="center"
+        style="@style/TextView.PoppinsLight14spfff"
+        android:textColor="#8D92A3"/>
+
+    <Button
+        android:layout_marginTop="32dp"
+        android:layout_width="200dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Kembali Ke Beranda"
+        android:textAllCaps="false"
+        style="@style/Button.Primary"/>
+
+    <Button
+        android:layout_marginTop="12dp"
+        android:layout_width="200dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Lihat Pesananku"
+        android:textAllCaps="false"
+        style="@style/Button.Secondary"/>
+
+
+
+
+
+</LinearLayout>
