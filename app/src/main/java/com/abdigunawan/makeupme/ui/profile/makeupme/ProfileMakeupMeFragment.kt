@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.ProfileMenuModel
+import com.abdigunawan.makeupme.ui.profile.AboutActivity
 import com.abdigunawan.makeupme.ui.profile.ProfileMenuAdapter
 import kotlinx.android.synthetic.main.fragment_profile_account.*
 

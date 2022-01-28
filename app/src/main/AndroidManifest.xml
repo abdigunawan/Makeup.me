@@ -13,7 +13,7 @@
             android:name=".ui.seeall.LihatSemuaMuaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.profile.makeupme.AboutActivity"
+            android:name=".ui.profile.AboutActivity"
             android:exported="false" />
         <activity
             android:name=".ui.detail.DetailMuaActivity"

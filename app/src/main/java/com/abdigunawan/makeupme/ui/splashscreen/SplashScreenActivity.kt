@@ -14,7 +14,8 @@ import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.ui.onboarding.OnBoardingActivity
 
 class SplashScreenActivity : AppCompatActivity() {
-    @RequiresApi(Build.VERSION_CODES.R)
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)

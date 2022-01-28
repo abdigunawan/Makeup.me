@@ -1,5 +1,6 @@
 package com.abdigunawan.makeupme.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,11 +23,17 @@ class ProfileFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val sectionPagerAdapter = SectionPagerAdapter (
-            childFragmentManager
-        )
-        viewPager.adapter = sectionPagerAdapter
-        tabLayout.setupWithViewPager(viewPager)
+
+        layoutTentangMakeupme.setOnClickListener {
+            val about = Intent(activity, AboutActivity::class.java)
+            startActivity(about)
+        }
+
+//        val sectionPagerAdapter = SectionPagerAdapter (
+//            childFragmentManager
+//        )
+//        viewPager.adapter = sectionPagerAdapter
+//        tabLayout.setupWithViewPager(viewPager)
 
     }
 }

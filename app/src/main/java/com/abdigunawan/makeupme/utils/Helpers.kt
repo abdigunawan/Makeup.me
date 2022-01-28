@@ -1,4 +1,4 @@
-package com.abdigunawan.foodmarketkotlin.utils
+package com.abdigunawan.makeupme.utils
 
 import android.widget.TextView
 import java.text.DecimalFormat
