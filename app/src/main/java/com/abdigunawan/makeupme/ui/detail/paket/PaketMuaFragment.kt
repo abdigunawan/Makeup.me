@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.MuaPaketModel
 import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_paket_mua.*
 
 class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback {
 
