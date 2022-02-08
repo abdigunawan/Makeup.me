@@ -39,20 +39,12 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
+            android:layout_marginBottom="16dp"
             style="@style/TextView.PoppinsLight11sp8D92A3"
             android:text="Jln. Abu bakar Lambogo Lr.5 No.12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <RatingBar
-            android:id="@+id/rbMua"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="16dp"
-            style="@style/Widget.AppCompat.RatingBar.Small"
-            android:theme="@style/RatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

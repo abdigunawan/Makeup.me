@@ -1,5 +1,6 @@
 package com.abdigunawan.makeupme.ui.detail
 
+import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -13,10 +14,10 @@ class SectionPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getPageTitle(position: Int): CharSequence? {
         return when(position){
             0 -> {
-                "Paket Mua"
+                "Paket"
             }
             1 -> {
-                "Jadwal Mua"
+                "Jadwal"
             }
             2 -> {
                 "Testimoni"

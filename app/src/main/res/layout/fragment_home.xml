@@ -1,160 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#FE9BB3"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TextView.PoppinsRegular12spfff"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="160dp"
+        android:text="Mulai Mencari MUA yang Cocok \nDengan Seleramu !"
+        android:textAlignment="textStart"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_women"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        style="@style/EditText.PoppinsRegular14spE6C5C9"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/shape_rectangle_25_fff"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="9dp"
+        android:inputType="textPersonName"
+        android:hint="Cari Makeup Artist"
+        android:paddingLeft="20dp"
+        android:textColorHint="#E6C5C9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="#FE9BB3"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_rectangle_40_fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
 
-        <TextView
-            android:id="@+id/textView5"
-            style="@style/TextView.PoppinsRegular12spfff"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="160dp"
-            android:text="Mulai Mencari MUA yang Cocok \nDengan Seleramu !"
-            android:textAlignment="textStart"
-            android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ic_women"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/editText"
-            style="@style/EditText.PoppinsRegular14spE6C5C9"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcList"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="40dp"
-            android:background="@drawable/shape_rectangle_25_fff"
-            android:drawableLeft="@drawable/ic_search"
-            android:drawablePadding="9dp"
-            android:inputType="textPersonName"
-            android:hint="Cari Makeup Artist"
-            android:paddingLeft="20dp"
-            android:textColorHint="#E6C5C9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/shape_rectangle_40_fff"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText">
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_seeall_vertical" />
 
-            <TextView
-                android:id="@+id/textView32"
-                style="@style/TextView.PoppinsSemiBold16sp8020202"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:text="Terbaru Disekitarmu"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rcList" />
-
-            <TextView
-                android:id="@+id/btnShowNew"
-                style="@style/TextView.PoppinsLight14spfff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:text="Lihat Semua"
-                android:textColor="#FE9BB3"
-                android:textSize="12dp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView32"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView32" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
-                tools:itemCount="1"
-                tools:listitem="@layout/item_home_horizontal" />
-
-            <TextView
-                android:id="@+id/textView6"
-                style="@style/TextView.PoppinsSemiBold16sp8020202"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:text="Populer Disekitarmu"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/btnShowPopuler"
-                style="@style/TextView.PoppinsLight14spfff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:text="Lihat Semua"
-                android:textColor="#FE9BB3"
-                android:textSize="12dp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView6" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcList2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView32"
-                tools:itemCount="1"
-                tools:listitem="@layout/item_home_horizontal" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="190dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:src="@drawable/ic_makeupme"
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/TextView.PoppinsSemiBold16sp8020202"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Mua Di Kotamu!"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="190dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_makeupme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.HomeModel
-import kotlinx.android.synthetic.main.item_home_horizontal.view.*
+import kotlinx.android.synthetic.main.item_seeall_vertical.view.*
 
 class HomeAdapter (
     private val listData : List<HomeModel>,
@@ -14,7 +14,7 @@ class HomeAdapter (
 ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.item_home_horizontal, parent, false)
+        val view = layoutInflater.inflate(R.layout.item_seeall_vertical, parent, false)
         return ViewHolder(view)
     }
 
@@ -31,8 +31,6 @@ class HomeAdapter (
             itemView.apply {
                 tvTitle.text = data.title
                 tvAlamat.text = data.alamat
-                rbMua.rating = data.rating
-
 //                Glide.with(context)
 //                    .load(data.src)
 //                    .into(ivPoster)

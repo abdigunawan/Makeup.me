@@ -15,9 +15,10 @@ class DetailMuaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_mua)
 
         val pageRequest = intent.getIntExtra("page_request", 0)
-        if (pageRequest == 2) {
+        if (pageRequest == 4) {
             toolbarDetailMua()
             val navOptions = NavOptions.Builder().setPopUpTo(R.id.fragmentDetailMua, true).build()
+
             Navigation.findNavController(findViewById(R.id.detailHostFragment)).navigate(R.id.action_fragmentDetailMua_to_fragmentDetailPaket, null,navOptions)
         }
     }

@@ -47,7 +47,7 @@ class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback {
 
     override fun onClick(v: View, data: MuaPaketModel) {
         val detailpaket = Intent(activity, DetailMuaActivity::class.java)
-        detailpaket.putExtra("page_request", 2)
+        detailpaket.putExtra("page_request", 4)
         startActivity(detailpaket)
     }
 
