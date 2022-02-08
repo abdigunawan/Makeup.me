@@ -20,6 +20,7 @@
 
 
         <ImageView
+            android:id="@+id/ivSignupFoto"
             android:layout_gravity="center"
             android:src="@drawable/ic_picture_empty"
             android:layout_width="110dp"
@@ -33,10 +34,13 @@
             android:text="Nama Lengkap" />
 
         <EditText
+            android:id="@+id/etSignupNama"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
+            android:textColor="#020202"
+            android:inputType="textShortMessage"
             android:background="@drawable/shape_rectangle_outline_8_020202"
             android:hint="Masukkan nama lengkapmu"
             android:padding="10dp" />
@@ -49,9 +53,11 @@
             android:text="Email" />
 
         <EditText
+            android:id="@+id/etSignupEmail"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#020202"
             android:layout_marginTop="6dp"
             android:background="@drawable/shape_rectangle_outline_8_020202"
             android:hint="Masukkan Emailmu"
@@ -66,13 +72,15 @@
             android:text="Password" />
 
         <EditText
+            android:id="@+id/etSignupPassword"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#020202"
             android:layout_marginTop="6dp"
             android:background="@drawable/shape_rectangle_outline_8_020202"
             android:hint="Buat Passwordmu"
-            android:inputType="textShortMessage|textPassword"
+            android:inputType="textPassword"
             android:padding="10dp" />
 
         <Button

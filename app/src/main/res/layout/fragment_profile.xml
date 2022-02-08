@@ -14,9 +14,9 @@
         android:background="#FE9BB3">
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/ivUserLogin"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_picture_empty"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/tvUserLogin"
             style="@style/TextView.PoppinsRegular18sp020202"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,10 +33,10 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintTop_toBottomOf="@+id/ivUserLogin" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/tvEmailUserLogin"
             style="@style/TextView.PoppinsRegular14sp8D92A3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintTop_toBottomOf="@+id/tvUserLogin" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -55,7 +55,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
+            app:layout_constraintTop_toBottomOf="@+id/tvEmailUserLogin">
 
 
             <TextView
@@ -321,6 +321,7 @@
                 android:background="@drawable/shape_rectangle_outline_8_fe9bb3"
                 android:text="Log Out"
                 android:textAllCaps="false"
+                android:fontFamily="@font/poppins"
                 android:textColor="#FE9BB3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

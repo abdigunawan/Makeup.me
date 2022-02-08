@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable-v24/ic_dropdown.xml" value="0.2578125" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable-v24/indicator_inactive_background.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable/bottom_nav_icon_color_selector.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable/bottom_nav_icon_home_selector.xml" value="0.26614583333333336" />
@@ -44,6 +45,7 @@
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable/shape_rectangle_8_fff.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable/shape_rectangle_outline_8_020202.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable/shape_rectangle_outline_8_fe9bb3.xml" value="0.2578125" />
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable/style_spinner.xml" value="0.2578125" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/drawable/unselected_onboarding.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/font/poppins.xml" value="0.28020833333333334" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_about.xml" value="0.2" />
@@ -54,6 +56,7 @@
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_on_boarding.xml" value="0.176" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/activity_splash_screen.xml" value="0.176" />
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/dialog_loader.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_customize_order.xml" value="0.264" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_detail_mua.xml" value="0.264" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/fragment_detail_paket.xml" value="0.264" />
@@ -80,6 +83,7 @@
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_paket_horizontal.xml" value="0.176" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_seeall_vertical.xml" value="0.4" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/item_testimoni_horizontal.xml" value="0.2" />
+        <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/layout_spinner.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/layout_toolbar.xml" value="0.4" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/layout_toolbar_detail.xml" value="0.25" />
         <entry key="..\:/Users/abdig/AndroidStudioProjects/Makeupme/app/src/main/res/layout/onboarding_layout.xml" value="0.264" />

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:orientation="vertical"
-    tools:context=".ui.auth.signin.SigninFragment">
+    tools:context=".ui.auth.signup.SignUpAddressFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,10 +27,12 @@
             android:text="No. HP" />
 
         <EditText
+            android:id="@+id/etSignUpNohp"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
+            android:textColor="#020202"
             android:background="@drawable/shape_rectangle_outline_8_020202"
             android:hint="Masukkan Nomor hpmu"
             android:inputType="textShortMessage"
@@ -44,10 +46,12 @@
             android:text="Alamat" />
 
         <EditText
+            android:id="@+id/etSignupAlamat"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
+            android:textColor="#020202"
             android:background="@drawable/shape_rectangle_outline_8_020202"
             android:hint="Masukkan Alamat lengkapmu"
             android:padding="10dp" />
@@ -59,8 +63,11 @@
             android:text="Nomor Rumah" />
 
         <EditText
+            android:id="@+id/etSignupNoRumah"
             android:layout_marginTop="6dp"
             android:padding="10dp"
+            android:textColor="#020202"
+            android:inputType="textShortMessage"
             android:background="@drawable/shape_rectangle_outline_8_020202"
             style="@style/EditText.PoppinsRegular14sp8D92A3"
             android:hint="Masukkan Nomor Rumahmu"
@@ -73,14 +80,12 @@
             android:layout_height="wrap_content"
             android:text="Kota" />
 
-        <EditText
-            android:layout_marginTop="6dp"
-            android:padding="10dp"
-            android:background="@drawable/shape_rectangle_outline_8_020202"
-            style="@style/EditText.PoppinsRegular14sp8D92A3"
-            android:hint="Pilih Kotamu"
+        <Spinner
+            android:id="@+id/spinnerKota"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/style_spinner" />
 
 
         <Button
