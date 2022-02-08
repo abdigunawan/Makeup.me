@@ -7,8 +7,6 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.abdigunawan.makeupme.ui.detail.jadwal.JadwalMuaFragment
 import com.abdigunawan.makeupme.ui.detail.paket.PaketMuaFragment
 import com.abdigunawan.makeupme.ui.detail.testimoni.TestimoniMuaFragment
-import com.abdigunawan.makeupme.ui.profile.akun.ProfileAccountFragment
-import com.abdigunawan.makeupme.ui.profile.makeupme.ProfileMakeupMeFragment
 
 class SectionPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getPageTitle(position: Int): CharSequence? {

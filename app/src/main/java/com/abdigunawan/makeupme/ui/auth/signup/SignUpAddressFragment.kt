@@ -14,7 +14,6 @@ import cn.pedant.SweetAlert.SweetAlertDialog
 import com.abdigunawan.makeupme.Makeupme
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.request.RegisterRequest
-import com.abdigunawan.makeupme.model.response.login.LoginResponse
 import com.abdigunawan.makeupme.model.response.login.X0
 import com.abdigunawan.makeupme.ui.auth.AuthActivity
 import com.google.gson.Gson

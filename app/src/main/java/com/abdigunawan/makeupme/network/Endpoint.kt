@@ -2,6 +2,7 @@ package com.abdigunawan.muapartner.network
 
 import com.abdigunawan.makeupme.model.response.login.LoginResponse
 import com.abdigunawan.makeupme.model.response.login.X0
+import com.abdigunawan.makeupme.model.response.logout.LogOutResponse
 import io.reactivex.Observable
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -28,5 +29,8 @@ interface Endpoint {
         @Part gambar: MultipartBody.Part?,
         @Part("roles") roles: RequestBody?
     ): Observable<LoginResponse<X0>>
+
+    @POST("logout")
+    fun logout() : Observable<LogOutResponse>
 
 }

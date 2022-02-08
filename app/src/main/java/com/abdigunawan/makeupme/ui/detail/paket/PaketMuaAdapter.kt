@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.utils.Helpers.formatPrice
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.MuaPaketModel
-import com.abdigunawan.makeupme.ui.profile.ProfileMenuAdapter
 import kotlinx.android.synthetic.main.item_paket_horizontal.view.*
 
 class PaketMuaAdapter(
