@@ -34,11 +34,13 @@ class DetailMuaActivity : AppCompatActivity() {
 
 
     private fun initView() {
-        val profilMua = BuildConfig.BASE_URL+"assets/img/mua/" + detailmua.gambar
-        Glide.with(this)
-            .load(profilMua)
-            .apply(RequestOptions.centerCropTransform())
-            .into(ivProfilMua)
+        if (!detailmua.gambar.isNullOrEmpty()) {
+            val profilMua = BuildConfig.BASE_URL+"assets/img/mua/" + detailmua.gambar
+            Glide.with(this)
+                .load(profilMua)
+                .apply(RequestOptions.centerCropTransform())
+                .into(ivProfilMua)
+        }
         tvNamaMua.text = detailmua.name
         tvAlamatMua.setText(detailmua.alamat + ", " + detailmua.noRumah)
         tvTeleponMua.text = detailmua.noHp

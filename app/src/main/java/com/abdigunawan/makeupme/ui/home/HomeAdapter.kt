@@ -31,16 +31,18 @@ class HomeAdapter (
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(data : Kota, itemAdapterCallBack: ItemAdapterCallback) {
-            val profilMua = BuildConfig.BASE_URL+"assets/img/mua/" + data.gambar
             itemView.apply {
                 tvTitle.text = data.name
                 tvAlamat.text = data.alamat
 //                Glide.with(context)
 //                    .load(data.src)
 //                    .into(ivPoster)
-                Glide.with(context)
-                    .load(profilMua)
-                    .into(ivProfilMua)
+                if (!data.gambar.isNullOrEmpty()) {
+                    val profilMua = BuildConfig.BASE_URL+"assets/img/mua/" + data.gambar
+                    Glide.with(context)
+                        .load(profilMua)
+                        .into(ivProfilMua)
+                }
 
                 itemView.setOnClickListener { itemAdapterCallBack.onClick(it, data) }
             }

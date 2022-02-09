@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/iv_mua2" />
+            android:src="@drawable/ic_profilpic" />
 
         <TextView
             android:id="@+id/tvTitle"
