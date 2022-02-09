@@ -2,12 +2,9 @@ package com.abdigunawan.makeupme.ui.detail
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.WindowManager
-import androidx.navigation.NavOptions
-import androidx.navigation.Navigation
+import android.telephony.PhoneNumberUtils
+import androidx.appcompat.app.AppCompatActivity
 import com.abdigunawan.makeupme.BuildConfig
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.response.home.Kota
@@ -15,6 +12,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.activity_detail_mua.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
+import java.util.*
+
 
 class DetailMuaActivity : AppCompatActivity() {
 
@@ -41,9 +40,11 @@ class DetailMuaActivity : AppCompatActivity() {
                 .apply(RequestOptions.centerCropTransform())
                 .into(ivProfilMua)
         }
+
+        val formattedNumber = PhoneNumberUtils.formatNumber("0"+detailmua.noHp, Locale.getDefault().country)
         tvNamaMua.text = detailmua.name
         tvAlamatMua.setText(detailmua.alamat + ", " + detailmua.noRumah)
-        tvTeleponMua.text = detailmua.noHp
+        tvTeleponMua.text = formattedNumber
     }
 
     private fun initListener() {
