@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
         <activity
+            android:name=".ui.home.search.SearchActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.seeall.LihatSemuaMuaActivity"
             android:exported="false" />
         <activity

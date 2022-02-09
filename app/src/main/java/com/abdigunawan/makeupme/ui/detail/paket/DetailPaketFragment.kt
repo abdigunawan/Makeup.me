@@ -27,7 +27,6 @@ class DetailPaketFragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(R.id.action_fragmentDetailPaket_to_fragmentCustomizeOrder, null)
 
-            (activity as DetailMuaActivity).toolbarPayment()
         }
 
     }

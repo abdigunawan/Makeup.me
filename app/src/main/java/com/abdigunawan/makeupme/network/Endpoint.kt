@@ -1,5 +1,6 @@
 package com.abdigunawan.muapartner.network
 
+import com.abdigunawan.makeupme.model.response.home.HomeGetMuaResponse
 import com.abdigunawan.makeupme.model.response.login.LoginResponse
 import com.abdigunawan.makeupme.model.response.login.X0
 import com.abdigunawan.makeupme.model.response.logout.LogOutResponse
@@ -32,5 +33,8 @@ interface Endpoint {
 
     @POST("logout")
     fun logout() : Observable<LogOutResponse>
+
+    @GET("user/produk/get")
+    fun getproduk() : Observable<HomeGetMuaResponse>
 
 }

@@ -28,7 +28,6 @@ class CustomizeOrderFragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(R.id.action_fragmentCustomizeOrder_to_fragmentPembayaran, null)
 
-            (activity as DetailMuaActivity).toolbarPayment()
         }
     }
 }

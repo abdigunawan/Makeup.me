@@ -1,35 +1,54 @@
 package com.abdigunawan.makeupme.ui.detail
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
+import com.abdigunawan.makeupme.BuildConfig
 import com.abdigunawan.makeupme.R
+import com.abdigunawan.makeupme.model.response.home.Kota
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import kotlinx.android.synthetic.main.activity_detail_mua.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 
 class DetailMuaActivity : AppCompatActivity() {
+
+    private val detailmua by lazy { intent.getSerializableExtra("detailmua") as Kota }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_mua)
 
-        val pageRequest = intent.getIntExtra("page_request", 0)
-        if (pageRequest == 4) {
-            toolbarDetailMua()
-            val navOptions = NavOptions.Builder().setPopUpTo(R.id.fragmentDetailMua, true).build()
+        initView()
+        initListener()
 
-            Navigation.findNavController(findViewById(R.id.detailHostFragment)).navigate(R.id.action_fragmentDetailMua_to_fragmentDetailPaket, null,navOptions)
+        val sectionPagerAdapter = SectionPagerAdapter (getSupportFragmentManager())
+        viewPager.adapter = sectionPagerAdapter
+        tabLayout.setupWithViewPager(viewPager)
+    }
+
+
+    private fun initView() {
+        val profilMua = BuildConfig.BASE_URL+"assets/img/mua/" + detailmua.gambar
+        Glide.with(this)
+            .load(profilMua)
+            .apply(RequestOptions.centerCropTransform())
+            .into(ivProfilMua)
+        tvNamaMua.text = detailmua.name
+        tvAlamatMua.setText(detailmua.alamat + ", " + detailmua.noRumah)
+        tvTeleponMua.text = detailmua.noHp
+    }
+
+    private fun initListener() {
+        btnChat.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/62" + detailmua.noHp + "/?text=Halo%20Kak%20" + detailmua.name))
+            startActivity(intent)
         }
-    }
-
-    fun toolbarDetailMua() {
-        toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_arrow_back_fff, null)
-        toolbar.setNavigationOnClickListener { onBackPressed() }
-    }
-
-    fun toolbarPayment() {
-        toolbar.visibility = View.GONE
     }
 
 }

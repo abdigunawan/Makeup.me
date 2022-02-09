@@ -169,6 +169,16 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="SearchView">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:tint">@color/white</item>
+        <item name="android:editTextColor">@color/white</item>
+    </style>
+
+
+
     <!--    Custom Style Rating-->
     <style name="RatingBar">
         <item name="colorControlNormal">#ECECEC</item>

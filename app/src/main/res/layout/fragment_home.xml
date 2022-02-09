@@ -31,21 +31,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editText"
-        style="@style/EditText.PoppinsRegular14spE6C5C9"
+    <SearchView
+        android:id="@+id/etSearch"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:theme="@style/SearchView"
+        android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+        android:iconifiedByDefault="false"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="40dp"
+        android:queryBackground="@android:color/transparent"
         android:background="@drawable/shape_rectangle_25_fff"
-        android:drawableLeft="@drawable/ic_search"
-        android:drawablePadding="9dp"
-        android:inputType="textPersonName"
-        android:hint="Cari Makeup Artist"
-        android:paddingLeft="20dp"
-        android:textColorHint="#E6C5C9"
+        android:queryHint="Cari Makeup Artist"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -58,7 +55,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText">
+        app:layout_constraintTop_toBottomOf="@+id/etSearch">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcList"
@@ -70,12 +67,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/tvKota"
             tools:itemCount="1"
             tools:listitem="@layout/item_seeall_vertical" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/tvKota"
             style="@style/TextView.PoppinsSemiBold16sp8020202"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

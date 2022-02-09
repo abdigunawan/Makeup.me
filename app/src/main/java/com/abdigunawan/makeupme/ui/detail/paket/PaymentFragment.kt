@@ -27,7 +27,6 @@ class PaymentFragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(R.id.action_fragmentPembayaran_to_fragmentPembayaranSukses, null)
 
-            (activity as DetailMuaActivity).toolbarPayment()
         }
     }
 }

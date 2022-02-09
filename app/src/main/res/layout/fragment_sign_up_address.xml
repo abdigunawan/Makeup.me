@@ -35,7 +35,7 @@
             android:textColor="#020202"
             android:background="@drawable/shape_rectangle_outline_8_020202"
             android:hint="Masukkan Nomor hpmu"
-            android:inputType="textShortMessage"
+            android:inputType="number"
             android:padding="10dp" />
 
         <TextView

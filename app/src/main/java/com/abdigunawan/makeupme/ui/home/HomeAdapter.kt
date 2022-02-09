@@ -4,12 +4,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.abdigunawan.makeupme.BuildConfig
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.HomeModel
+import com.abdigunawan.makeupme.model.response.home.Kota
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_seeall_vertical.view.*
 
 class HomeAdapter (
-    private val listData : List<HomeModel>,
+    private val listData : List<Kota>,
     private val itemAdapterCallBack : ItemAdapterCallback,
 ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.ViewHolder {
@@ -27,13 +30,17 @@ class HomeAdapter (
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(data : HomeModel, itemAdapterCallBack: ItemAdapterCallback) {
+        fun bind(data : Kota, itemAdapterCallBack: ItemAdapterCallback) {
+            val profilMua = BuildConfig.BASE_URL+"assets/img/mua/" + data.gambar
             itemView.apply {
-                tvTitle.text = data.title
+                tvTitle.text = data.name
                 tvAlamat.text = data.alamat
 //                Glide.with(context)
 //                    .load(data.src)
 //                    .into(ivPoster)
+                Glide.with(context)
+                    .load(profilMua)
+                    .into(ivProfilMua)
 
                 itemView.setOnClickListener { itemAdapterCallBack.onClick(it, data) }
             }
@@ -41,6 +48,6 @@ class HomeAdapter (
     }
 
     interface ItemAdapterCallback{
-        fun onClick(v: View, data: HomeModel)
+        fun onClick(v: View, data: Kota)
     }
 }
