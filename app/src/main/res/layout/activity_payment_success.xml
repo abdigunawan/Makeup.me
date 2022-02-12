@@ -6,7 +6,7 @@
     android:gravity="center"
     android:layout_marginTop="100dp"
     android:orientation="vertical"
-    tools:context=".ui.detail.paket.PaymentSuccessFragment">
+    tools:context=".ui.detail.paket.order.PaymentSuccessActivity">
 
     <ImageView
         android:layout_width="250dp"
@@ -49,8 +49,6 @@
         android:text="Lihat Pesananku"
         android:textAllCaps="false"
         style="@style/Button.Secondary"/>
-
-
 
 
 

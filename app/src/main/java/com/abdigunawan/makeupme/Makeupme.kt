@@ -3,7 +3,7 @@ package com.abdigunawan.makeupme
 import android.content.SharedPreferences
 import androidx.multidex.MultiDexApplication
 import androidx.preference.PreferenceManager
-import com.abdigunawan.muapartner.network.HttpClient
+import com.abdigunawan.makeupme.network.HttpClient
 
 class Makeupme : MultiDexApplication() {
 

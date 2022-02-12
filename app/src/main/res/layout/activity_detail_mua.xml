@@ -16,7 +16,7 @@
         android:layout_marginTop="32dp"
         android:elevation="10dp"
         android:outlineSpotShadowColor="@color/white"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

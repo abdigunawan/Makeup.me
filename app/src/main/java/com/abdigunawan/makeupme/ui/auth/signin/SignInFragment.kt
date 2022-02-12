@@ -63,6 +63,7 @@ class SignInFragment : Fragment(),SignInContract.View {
                 etPassword.error = "Masukin Password Dulu Dong"
             } else {
                 presenter.submitLogin(email,password)
+
             }
 
         }

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.MuaPaketModel
 import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
+import com.abdigunawan.makeupme.ui.detail.paket.detail.DetailPaketActivity
 import kotlinx.android.synthetic.main.fragment_paket_mua.*
 
 class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback {
@@ -46,8 +47,7 @@ class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback {
     }
 
     override fun onClick(v: View, data: MuaPaketModel) {
-        val detailpaket = Intent(activity, DetailMuaActivity::class.java)
-        detailpaket.putExtra("page_request", 4)
+        val detailpaket = Intent(activity, DetailPaketActivity::class.java)
         startActivity(detailpaket)
     }
 

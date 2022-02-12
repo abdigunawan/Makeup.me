@@ -1,4 +1,4 @@
-package com.abdigunawan.muapartner.network
+package com.abdigunawan.makeupme.network
 
 import android.util.Log
 import com.abdigunawan.makeupme.BuildConfig

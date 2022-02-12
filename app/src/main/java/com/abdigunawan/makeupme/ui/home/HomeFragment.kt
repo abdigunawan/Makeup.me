@@ -28,7 +28,6 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
     private var adapter : HomeAdapter? = null
     var progressDialog: Dialog? = null
     private lateinit var presenter: HomePresenter
-    private var tempArrayList : ArrayList<Kota> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -76,12 +75,19 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
     }
 
     override fun onHomeSuccess(homeGetMuaResponse: HomeGetMuaResponse) {
-        tempArrayList.clear()
-        tempArrayList.addAll(homeGetMuaResponse.kota)
+        val tempArrayList : ArrayList<Kota> = ArrayList()
         adapter = HomeAdapter(tempArrayList, this)
         var layoutManager : RecyclerView.LayoutManager = GridLayoutManager(context,2)
         rcList.layoutManager = layoutManager
         rcList.adapter = adapter
+
+        if (homeGetMuaResponse.kota.isNullOrEmpty()) {
+            ivKosong.visibility = View.VISIBLE
+            tvKosong.visibility = View.VISIBLE
+        } else {
+            ivKosong.visibility = View.GONE
+            tvKosong.visibility = View.GONE
+        }
 
         etSearch.setOnQueryTextListener(object : android.widget.SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -89,12 +95,11 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-
                 if (etSearch!!.isNotEmpty()){
                     tempArrayList.clear()
-                    val search = newText?.toLowerCase(Locale.getDefault())
+                    val search = newText?.lowercase(Locale.getDefault())
                     homeGetMuaResponse.kota.forEach {
-                        if (it.name.toLowerCase(Locale.getDefault()).contains(search!!) || it.alamat.toLowerCase(Locale.getDefault()).contains(search!!)) {
+                        if (it.name.lowercase(Locale.getDefault()).contains(search!!) || it.alamat.lowercase(Locale.getDefault()).contains(search)) {
                             tempArrayList.add(it)
                         }
                     }

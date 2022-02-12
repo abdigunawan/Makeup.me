@@ -1,7 +1,7 @@
 package com.abdigunawan.makeupme.ui.home
 
 import com.abdigunawan.makeupme.utils.Helpers.getErrorBodyMessage
-import com.abdigunawan.muapartner.network.HttpClient
+import com.abdigunawan.makeupme.network.HttpClient
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

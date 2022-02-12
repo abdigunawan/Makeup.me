@@ -4,8 +4,9 @@
     android:background="#fff"
     android:id="@+id/cvPaketMua"
     app:cardCornerRadius="10dp"
-    app:cardUseCompatPadding="true"
-    android:outlineSpotShadowColor="#8D92A3"
+    android:layout_margin="8dp"
+    app:cardElevation="10dp"
+    android:outlineSpotShadowColor="@color/white"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -37,7 +38,7 @@
             style="@style/TextView.PoppinsMedium14sp202020"
             android:text="Paket Wisuda"
             android:layout_marginTop="6dp"
-            android:layout_marginStart="6dp"
+            android:layout_marginStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -45,8 +46,8 @@
             android:id="@+id/tvHarga"
             style="@style/TextView.PoppinsReguler9sp8D92A3"
             android:text="IDR. 289.000"
-            android:layout_marginStart="6dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

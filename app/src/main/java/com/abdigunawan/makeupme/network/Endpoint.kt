@@ -1,4 +1,4 @@
-package com.abdigunawan.muapartner.network
+package com.abdigunawan.makeupme.network
 
 import com.abdigunawan.makeupme.model.response.home.HomeGetMuaResponse
 import com.abdigunawan.makeupme.model.response.login.LoginResponse
@@ -36,5 +36,14 @@ interface Endpoint {
 
     @GET("user/produk/get")
     fun getproduk() : Observable<HomeGetMuaResponse>
+
+    @GET("user/produk/get/paket/{id}")
+    fun getpaketmua(@Path(value = "id") id_paket: String)
+
+    @GET("user/produk/get/testimoni/{id}")
+    fun gettestimoni(@Path(value = "id") id_paket: String)
+
+    @GET("user/produk/get/jadwal/{id}")
+    fun getjadwal(@Path(value = "id") id_paket: String)
 
 }

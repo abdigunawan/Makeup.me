@@ -19,24 +19,37 @@
         tools:context=".ui.auth.signin.SigninFragment">
 
 
-        <TextView
-            android:layout_marginTop="16dp"
-            style="@style/TextView.PoppinsRegular16sp020202"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No. HP" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/etSignUpNohp"
-            style="@style/EditText.PoppinsRegular14sp8D92A3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:textColor="#020202"
-            android:background="@drawable/shape_rectangle_outline_8_020202"
-            android:hint="Masukkan Nomor hpmu"
-            android:inputType="number"
-            android:padding="10dp" />
+            <EditText
+                style="@style/EditText.PoppinsRegular14sp8D92A3"
+                android:layout_width="50dp"
+                android:text="+62"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_marginTop="6dp"
+                android:editable="false"
+                android:textColor="#1ABC9C"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/shape_rectangle_outline_8_020202"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etSignupNohp"
+                android:layout_marginStart="8dp"
+                style="@style/EditText.PoppinsRegular14sp8D92A3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#020202"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/shape_rectangle_outline_8_020202"
+                android:hint="Masukkan Nomor hpmu"
+                android:inputType="number"
+                android:padding="10dp" />
+        </LinearLayout>
 
         <TextView
             android:layout_marginTop="16dp"

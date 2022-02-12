@@ -1,4 +1,4 @@
-package com.abdigunawan.muapartner.network
+package com.abdigunawan.makeupme.network
 
 import android.annotation.TargetApi
 import android.content.BroadcastReceiver

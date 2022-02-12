@@ -67,7 +67,7 @@ class SignUpAddressFragment : Fragment(),SignUpContract.View {
 
         btnSignupNow.setOnClickListener {
 
-            var nohp = etSignUpNohp.text.toString()
+            var nohp = etSignupNohp.text.toString()
             var alamat = etSignupAlamat.text.toString()
             var norumah = etSignupNoRumah.text.toString()
             var kota = spinnerKota.selectedItem.toString()
@@ -82,8 +82,8 @@ class SignUpAddressFragment : Fragment(),SignUpContract.View {
             }
 
             if (nohp.isNullOrEmpty()) {
-                etSignUpNohp.error = "Masukkan Nomor HP Dulu"
-                etSignUpNohp.requestFocus()
+                etSignupNohp.error = "Masukkan Nomor HP Dulu"
+                etSignupNohp.requestFocus()
             } else if (alamat.isNullOrEmpty()) {
                 etSignupAlamat.error = "Masukkan Alamatmu Dulu"
                 etSignupAlamat.requestFocus()
