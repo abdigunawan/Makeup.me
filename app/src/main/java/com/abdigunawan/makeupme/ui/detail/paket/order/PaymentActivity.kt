@@ -11,6 +11,7 @@ import com.abdigunawan.makeupme.Makeupme
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.response.home.paket.Paket
 import com.abdigunawan.makeupme.model.response.login.User
+import com.abdigunawan.makeupme.ui.home.HomeFragment
 import com.abdigunawan.makeupme.utils.Helpers.formatPrice
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -108,6 +109,11 @@ class PaymentActivity : AppCompatActivity(), PaymentContract.View {
         SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
             .setTitleText("SUKSES")
             .setContentText(message)
+            .setConfirmClickListener(SweetAlertDialog.OnSweetClickListener() {
+                it.dismissWithAnimation()
+                val home = Intent(this, com.abdigunawan.makeupme.ui.MainActivity::class.java)
+                startActivity(home)
+            })
             .show()
     }
 
