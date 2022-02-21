@@ -20,4 +20,41 @@
         tools:itemCount="1"
         tools:listitem="@layout/item_paket_horizontal" />
 
+    <LinearLayout
+        android:id="@+id/paketKosong"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="250dp"
+            android:layout_height="251dp"
+            android:src="@drawable/ic_empty_cuate" />
+
+        <TextView
+            style="@style/TextView.PoppinsRegular20sp020202"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Upsss!! Paketnya Kosong" />
+
+        <TextView
+            style="@style/TextView.PoppinsRegular14sp8D92A3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginHorizontal="32dp"
+            android:text="sepertinya makeup artist ini belum pernah menambah paket"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

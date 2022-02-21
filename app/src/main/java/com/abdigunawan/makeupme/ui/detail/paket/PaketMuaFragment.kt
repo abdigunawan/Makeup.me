@@ -67,6 +67,13 @@ class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback, PaketCo
         var layoutManager : RecyclerView.LayoutManager = GridLayoutManager(context,2)
         rcList2.layoutManager = layoutManager
         rcList2.adapter = adapter
+
+        if (muaPaketResponse.paket.isNullOrEmpty()) {
+            paketKosong.visibility = View.VISIBLE
+        } else {
+            paketKosong.visibility = View.GONE
+        }
+
     }
 
     override fun onPaketFailed(message: String) {

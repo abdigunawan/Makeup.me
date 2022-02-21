@@ -30,7 +30,6 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
     var progressDialog: Dialog? = null
     private lateinit var presenter: HomePresenter
     val tempArrayList : ArrayList<Kota> = ArrayList()
-    val dataMua : ArrayList<Kota> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -79,11 +78,12 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
 
     override fun onHomeSuccess(homeGetMuaResponse: HomeGetMuaResponse) {
 
-
-        adapter = HomeAdapter(homeGetMuaResponse.kota, this)
+        tempArrayList.clear()
+        adapter = HomeAdapter(tempArrayList, this)
         var layoutManager : RecyclerView.LayoutManager = GridLayoutManager(context,2)
         rcList.layoutManager = layoutManager
         rcList.adapter = adapter
+        tempArrayList.addAll(homeGetMuaResponse.kota)
 
         if (homeGetMuaResponse.kota.isNullOrEmpty()) {
             ivKosong.visibility = View.VISIBLE
@@ -102,7 +102,7 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
                 if (etSearch!!.isNotEmpty()){
                     tempArrayList.clear()
                     val search = newText?.lowercase(Locale.getDefault())
-                    dataMua.forEach {
+                    homeGetMuaResponse.kota.forEach {
                         if (it.name.lowercase(Locale.getDefault()).contains(search!!) || it.alamat.lowercase(Locale.getDefault()).contains(search)) {
                             tempArrayList.add(it)
                         }
@@ -110,7 +110,7 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
                     rcList.adapter!!.notifyDataSetChanged()
                 } else {
                     tempArrayList.clear()
-                    tempArrayList.addAll(dataMua)
+                    tempArrayList.addAll(homeGetMuaResponse.kota)
                     rcList.adapter!!.notifyDataSetChanged()
                 }
                 return true
