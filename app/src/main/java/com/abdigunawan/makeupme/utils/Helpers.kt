@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 object Helpers {
-    fun TextView.formatPrice(value : String) {
+    fun TextView.formatPrice(value: String) {
         this.text = getCurrendIDR(java.lang.Double.parseDouble(value))
     }
     fun getCurrendIDR(price : Double): String{

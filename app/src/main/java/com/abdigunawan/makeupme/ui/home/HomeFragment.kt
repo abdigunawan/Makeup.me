@@ -1,5 +1,6 @@
 package com.abdigunawan.makeupme.ui.home
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
@@ -28,6 +29,8 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
     private var adapter : HomeAdapter? = null
     var progressDialog: Dialog? = null
     private lateinit var presenter: HomePresenter
+    val tempArrayList : ArrayList<Kota> = ArrayList()
+    val dataMua : ArrayList<Kota> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -75,8 +78,9 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
     }
 
     override fun onHomeSuccess(homeGetMuaResponse: HomeGetMuaResponse) {
-        val tempArrayList : ArrayList<Kota> = ArrayList()
-        adapter = HomeAdapter(tempArrayList, this)
+
+
+        adapter = HomeAdapter(homeGetMuaResponse.kota, this)
         var layoutManager : RecyclerView.LayoutManager = GridLayoutManager(context,2)
         rcList.layoutManager = layoutManager
         rcList.adapter = adapter
@@ -98,7 +102,7 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
                 if (etSearch!!.isNotEmpty()){
                     tempArrayList.clear()
                     val search = newText?.lowercase(Locale.getDefault())
-                    homeGetMuaResponse.kota.forEach {
+                    dataMua.forEach {
                         if (it.name.lowercase(Locale.getDefault()).contains(search!!) || it.alamat.lowercase(Locale.getDefault()).contains(search)) {
                             tempArrayList.add(it)
                         }
@@ -106,7 +110,7 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
                     rcList.adapter!!.notifyDataSetChanged()
                 } else {
                     tempArrayList.clear()
-                    tempArrayList.addAll(homeGetMuaResponse.kota)
+                    tempArrayList.addAll(dataMua)
                     rcList.adapter!!.notifyDataSetChanged()
                 }
                 return true

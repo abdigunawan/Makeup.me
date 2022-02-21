@@ -18,7 +18,7 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp"
@@ -29,29 +29,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView9"
-                style="@style/TextView.PoppinsMedium14sp202020"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
-                android:text="Konfirmasi"
-                android:textSize="22dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView11"
-                style="@style/TextView.PoppinsLight14spfff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:text="Silahkan Konfirmasi Pesananmu"
-                android:textColor="#8D92A3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
             <ImageView
@@ -82,10 +59,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="24dp"
                 android:text="Paket Dipesan"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvPrice"
@@ -110,36 +87,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
 
             <TextView
-                android:id="@+id/tvNameItem"
-                style="@style/TextView.PoppinsRegular14sp8D92A3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:text="Paket Wisuda"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-            <TextView
-                android:id="@+id/tvHarga"
-                style="@style/TextView.PoppinsRegular14sp202020"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:text="IDR 18.390.000"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvNameItem" />
-
-            <TextView
                 android:id="@+id/textView14"
                 style="@style/TextView.PoppinsRegular14sp8D92A3"
                 android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
                 android:text="Jumlah"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvNameItem" />
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -150,7 +106,7 @@
                 android:layout_marginEnd="24dp"
                 android:text="8 Orang"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvHarga" />
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -244,7 +200,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
 
             <TextView
-                android:id="@+id/tvAddress2"
+                android:id="@+id/tvCatatan"
                 style="@style/TextView.PoppinsRegular14sp202020"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -256,7 +212,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView23"
-                app:layout_constraintTop_toBottomOf="@+id/tvCityASA" />
+                app:layout_constraintTop_toBottomOf="@+id/tvJamAcara" />
 
             <TextView
                 android:id="@+id/textView25"
@@ -292,7 +248,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
             <TextView
-                android:id="@+id/tvCity"
+                android:id="@+id/tvTanggalacara"
                 style="@style/TextView.PoppinsRegular14sp202020"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -326,7 +282,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
             <TextView
-                android:id="@+id/tvCityASA"
+                android:id="@+id/tvJamAcara"
                 style="@style/TextView.PoppinsRegular14sp202020"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -334,7 +290,7 @@
                 android:layout_marginEnd="24dp"
                 android:text="14.00"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+                app:layout_constraintTop_toBottomOf="@+id/tvTanggalacara" />
 
             <Button
                 android:id="@+id/btnCheckout"
@@ -351,7 +307,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvAddress2" />
+                app:layout_constraintTop_toBottomOf="@+id/tvCatatan" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

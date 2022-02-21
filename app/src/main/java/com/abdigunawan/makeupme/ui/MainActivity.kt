@@ -39,12 +39,21 @@ class MainActivity : AppCompatActivity() {
         networkConnection.observe(this, Observer { isConnected ->
 
             if (isConnected) {
+
+
                 layoutDisconnected.visibility = View.GONE
                 layoutConnected.visibility = View.VISIBLE
             }else {
                 layoutDisconnected.visibility = View.VISIBLE
                 layoutConnected.visibility = View.GONE
             }
+
+
+
+
+
+
+            80
 
         })
     }

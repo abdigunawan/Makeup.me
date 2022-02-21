@@ -1,6 +1,8 @@
 package com.abdigunawan.makeupme.network
 
 import com.abdigunawan.makeupme.model.response.home.HomeGetMuaResponse
+import com.abdigunawan.makeupme.model.response.home.paket.MuaPaketResponse
+import com.abdigunawan.makeupme.model.response.home.transaksi.HomeTransaksiResponse
 import com.abdigunawan.makeupme.model.response.login.LoginResponse
 import com.abdigunawan.makeupme.model.response.login.X0
 import com.abdigunawan.makeupme.model.response.logout.LogOutResponse
@@ -37,13 +39,25 @@ interface Endpoint {
     @GET("user/produk/get")
     fun getproduk() : Observable<HomeGetMuaResponse>
 
-    @GET("user/produk/get/paket/{id}")
-    fun getpaketmua(@Path(value = "id") id_paket: String)
+    @GET("user/produk/paket/{id}")
+    fun getpaketmua(@Path(value = "id") muaId:String) : Observable<MuaPaketResponse>
 
     @GET("user/produk/get/testimoni/{id}")
     fun gettestimoni(@Path(value = "id") id_paket: String)
 
     @GET("user/produk/get/jadwal/{id}")
     fun getjadwal(@Path(value = "id") id_paket: String)
+
+    @FormUrlEncoded
+    @POST("user/transaksi/{id}")
+    fun transaksipaket(
+        @Path(value = "id") paketId:String,
+        @Field("jumlah")jumlah:String,
+        @Field("tanggal_acara")tanggalacara:String,
+        @Field("jam_acara")jamacara:String,
+        @Field("catatan")catatan:String,
+    ) : Observable<HomeTransaksiResponse>
+
+
 
 }

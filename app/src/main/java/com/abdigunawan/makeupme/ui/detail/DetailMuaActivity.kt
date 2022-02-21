@@ -26,6 +26,7 @@ class DetailMuaActivity : AppCompatActivity() {
         initView()
         initListener()
 
+
         val sectionPagerAdapter = SectionPagerAdapter (getSupportFragmentManager())
         viewPager.adapter = sectionPagerAdapter
         tabLayout.setupWithViewPager(viewPager)
@@ -52,6 +53,10 @@ class DetailMuaActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/62" + detailmua.noHp + "/?text=Halo%20Kak%20" + detailmua.name))
             startActivity(intent)
         }
+    }
+
+    public fun sendDataId(): String {
+        return detailmua.id.toString()
     }
 
 }

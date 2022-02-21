@@ -4,13 +4,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.abdigunawan.makeupme.BuildConfig
 import com.abdigunawan.makeupme.utils.Helpers.formatPrice
 import com.abdigunawan.makeupme.R
-import com.abdigunawan.makeupme.model.dummy.MuaPaketModel
+import com.abdigunawan.makeupme.model.response.home.paket.Paket
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_paket_horizontal.view.*
+import kotlinx.android.synthetic.main.item_paket_horizontal.view.ivProfilMua
 
 class PaketMuaAdapter(
-    private val listData: List<MuaPaketModel>,
+    private val listData: List<Paket>,
     private val itemAdapterCallBack: ItemAdapterCallback,
 ) : RecyclerView.Adapter<PaketMuaAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaketMuaAdapter.ViewHolder {
@@ -28,14 +31,16 @@ class PaketMuaAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(data: MuaPaketModel, itemAdapterCallBack: ItemAdapterCallback) {
+        fun bind(data: Paket, itemAdapterCallBack: ItemAdapterCallback) {
             itemView.apply {
-                tvNamaPaket.text = data.title
-                tvHarga.formatPrice(data.price)
-
-//                Glide.with(context)
-//                    .load(data.src)
-//                    .into(ivPoster)
+                tvNamaPaket.text = data.namaPaket
+                tvHarga.formatPrice(data.harga.toString())
+                if (!data.foto.isNullOrEmpty()) {
+                    val fotopaket = BuildConfig.BASE_URL+"assets/img/mua/paket/" + data.foto
+                    Glide.with(context)
+                        .load(fotopaket)
+                        .into(ivProfilMua)
+                }
 
                 itemView.setOnClickListener { itemAdapterCallBack.onClick(it, data) }
             }
@@ -43,6 +48,6 @@ class PaketMuaAdapter(
     }
 
     interface ItemAdapterCallback{
-        fun onClick(v: View, data: MuaPaketModel)
+        fun onClick(v: View, data: Paket)
     }
 }

@@ -1,22 +1,28 @@
 package com.abdigunawan.makeupme.ui.detail.paket
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.abdigunawan.makeupme.R
-import com.abdigunawan.makeupme.model.dummy.MuaPaketModel
+import com.abdigunawan.makeupme.model.response.home.paket.MuaPaketResponse
+import com.abdigunawan.makeupme.model.response.home.paket.Paket
 import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
 import com.abdigunawan.makeupme.ui.detail.paket.detail.DetailPaketActivity
 import kotlinx.android.synthetic.main.fragment_paket_mua.*
 
-class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback {
+class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback, PaketContract.View {
 
-    private var paketList : ArrayList<MuaPaketModel> = ArrayList()
+    private var adapter : PaketMuaAdapter? = null
+    var progressDialog: Dialog? = null
+    private lateinit var presenter: PaketPresenter
+    private lateinit var getData: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,26 +35,53 @@ class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        initDataDummy()
-        var adapter = PaketMuaAdapter(paketList, this)
+        val activity: DetailMuaActivity? = activity as DetailMuaActivity?
+        getData = activity!!.sendDataId()
+
+        initView()
+        presenter = PaketPresenter(this)
+        presenter.getPaket(getData)
+
+    }
+
+    private fun initView() {
+        progressDialog = Dialog(requireContext())
+        val dialogLayout = layoutInflater.inflate(R.layout.dialog_loader, null)
+
+        progressDialog?.let {
+            it.setContentView(dialogLayout)
+            it.setCancelable(false)
+            it.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        }
+    }
+
+
+    override fun onClick(v: View, data: Paket) {
+        val detailpaket = Intent(activity, DetailPaketActivity::class.java).putExtra("detailpaket", data)
+        startActivity(detailpaket)
+    }
+
+    override fun onPaketSuccess(muaPaketResponse: MuaPaketResponse) {
+
+        adapter = PaketMuaAdapter(muaPaketResponse.paket, this)
         var layoutManager : RecyclerView.LayoutManager = GridLayoutManager(context,2)
         rcList2.layoutManager = layoutManager
         rcList2.adapter = adapter
-
-    }
-    fun initDataDummy(){
-        paketList = ArrayList()
-        paketList.add(MuaPaketModel("Paket Wisuda","289000",""))
-        paketList.add(MuaPaketModel("Paket Pernikahan","350000",""))
-        paketList.add(MuaPaketModel("Paket Tamu Pernikahan","300000",""))
-        paketList.add(MuaPaketModel("Paket Wisuda","289000",""))
-        paketList.add(MuaPaketModel("Paket Pernikahan","350000",""))
-        paketList.add(MuaPaketModel("Paket Tamu Pernikahan","300000",""))
     }
 
-    override fun onClick(v: View, data: MuaPaketModel) {
-        val detailpaket = Intent(activity, DetailPaketActivity::class.java)
-        startActivity(detailpaket)
+    override fun onPaketFailed(message: String) {
+        SweetAlertDialog(context, SweetAlertDialog.ERROR_TYPE)
+            .setTitleText("GAGAL MEMUAT PAKET")
+            .setContentText(message)
+            .show()
+    }
+
+    override fun showLoading() {
+        progressDialog?.show()
+    }
+
+    override fun dismissLoading() {
+        progressDialog?.dismiss()
     }
 
 }
