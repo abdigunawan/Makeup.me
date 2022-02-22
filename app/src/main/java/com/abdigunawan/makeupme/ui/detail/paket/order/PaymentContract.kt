@@ -13,6 +13,6 @@ interface PaymentContract {
     }
 
     interface Presenter : PaymentContract, BasePresenter {
-        fun addTransaksi(paketId : String ,jumlah : String,tanggalacara : String ,jamacara : String,catatan : String )
+        fun addTransaksi(paketId : String ,jumlah : String, tanggalacara : String ,jamacara : String,catatan : String )
     }
 }

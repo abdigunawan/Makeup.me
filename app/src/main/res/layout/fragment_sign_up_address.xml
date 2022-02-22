@@ -34,7 +34,7 @@
                 android:editable="false"
                 android:textColor="#1ABC9C"
                 android:fontFamily="@font/poppins"
-                android:background="@drawable/shape_rectangle_outline_8_020202"
+                android:background="@drawable/shape_rectangle_8_eeeeee"
                 android:layout_height="wrap_content"/>
 
             <EditText

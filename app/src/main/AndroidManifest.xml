@@ -8,12 +8,21 @@
     <application
         android:name=".Makeupme"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/makeupme"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/makeupme"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
+        <activity
+            android:name=".ui.profile.pengaturanakun.editprofil.EditProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.pengaturanakun.editpassword.EditPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.makeupme.saran.BeriMasukanActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.detail.paket.order.PaymentSuccessActivity"
             android:exported="false" />
@@ -33,7 +42,7 @@
             android:name=".ui.seeall.LihatSemuaMuaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.profile.AboutActivity"
+            android:name=".ui.profile.makeupme.AboutActivity"
             android:exported="false" />
         <activity
             android:name=".ui.detail.DetailMuaActivity"

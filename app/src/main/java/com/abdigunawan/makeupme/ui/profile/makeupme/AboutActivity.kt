@@ -1,4 +1,4 @@
-package com.abdigunawan.makeupme.ui.profile
+package com.abdigunawan.makeupme.ui.profile.makeupme
 
 import android.content.Intent
 import android.net.Uri

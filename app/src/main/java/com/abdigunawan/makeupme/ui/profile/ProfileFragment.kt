@@ -13,6 +13,10 @@ import com.abdigunawan.makeupme.Makeupme
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.response.login.User
 import com.abdigunawan.makeupme.ui.auth.AuthActivity
+import com.abdigunawan.makeupme.ui.profile.makeupme.AboutActivity
+import com.abdigunawan.makeupme.ui.profile.makeupme.saran.BeriMasukanActivity
+import com.abdigunawan.makeupme.ui.profile.pengaturanakun.editpassword.EditPasswordActivity
+import com.abdigunawan.makeupme.ui.profile.pengaturanakun.editprofil.EditProfilActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.gson.Gson
@@ -40,6 +44,11 @@ class ProfileFragment : Fragment(),LogoutContract.View {
         initListener()
         initView()
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        initUser()
     }
 
     private fun initView() {
@@ -70,10 +79,28 @@ class ProfileFragment : Fragment(),LogoutContract.View {
     }
 
     private fun initListener() {
+
         layoutTentangMakeupme.setOnClickListener {
             val about = Intent(activity, AboutActivity::class.java)
             startActivity(about)
         }
+
+        layoutUbahProfil.setOnClickListener {
+            val editProfil = Intent(activity, EditProfilActivity::class.java)
+            startActivity(editProfil)
+        }
+
+        layoutUbahPassword.setOnClickListener {
+            val editPassword = Intent(activity, EditPasswordActivity::class.java)
+            startActivity(editPassword)
+        }
+
+
+        layoutBeriMasukan.setOnClickListener {
+            val beriMasukan = Intent(activity, BeriMasukanActivity::class.java)
+            startActivity(beriMasukan)
+        }
+
 
         btnLogout.setOnClickListener {
             SweetAlertDialog(activity, SweetAlertDialog.WARNING_TYPE)
