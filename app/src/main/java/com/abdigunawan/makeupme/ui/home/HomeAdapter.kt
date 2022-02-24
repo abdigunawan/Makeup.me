@@ -34,9 +34,6 @@ class HomeAdapter (
             itemView.apply {
                 tvTitle.text = data.name
                 tvAlamat.text = data.alamat
-//                Glide.with(context)
-//                    .load(data.src)
-//                    .into(ivPoster)
                 if (!data.gambar.isNullOrEmpty()) {
                     val profilMua = BuildConfig.BASE_URL+"assets/img/mua/" + data.gambar
                     Glide.with(context)

@@ -24,6 +24,7 @@ class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback, PaketCo
     private lateinit var presenter: PaketPresenter
     private lateinit var getData: String
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,23 +39,10 @@ class PaketMuaFragment : Fragment(),PaketMuaAdapter.ItemAdapterCallback, PaketCo
         val activity: DetailMuaActivity? = activity as DetailMuaActivity?
         getData = activity!!.sendDataId()
 
-        initView()
         presenter = PaketPresenter(this)
         presenter.getPaket(getData)
 
     }
-
-    private fun initView() {
-        progressDialog = Dialog(requireContext())
-        val dialogLayout = layoutInflater.inflate(R.layout.dialog_loader, null)
-
-        progressDialog?.let {
-            it.setContentView(dialogLayout)
-            it.setCancelable(false)
-            it.window?.setBackgroundDrawableResource(android.R.color.transparent)
-        }
-    }
-
 
     override fun onClick(v: View, data: Paket) {
         val detailpaket = Intent(activity, DetailPaketActivity::class.java).putExtra("detailpaket", data)

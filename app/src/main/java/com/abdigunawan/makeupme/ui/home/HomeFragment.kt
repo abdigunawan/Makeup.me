@@ -60,6 +60,7 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
         var userResponse = Gson().fromJson(user, User::class.java)
 
         tvKota.setText("Makeup Artist Di " + userResponse.kota)
+
         progressDialog = Dialog(requireContext())
         val dialogLayout = layoutInflater.inflate(R.layout.dialog_loader, null)
 

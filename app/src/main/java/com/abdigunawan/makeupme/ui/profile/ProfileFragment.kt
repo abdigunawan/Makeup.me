@@ -3,6 +3,7 @@ package com.abdigunawan.makeupme.ui.profile
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.telephony.PhoneNumberUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +21,9 @@ import com.abdigunawan.makeupme.ui.profile.pengaturanakun.editprofil.EditProfilA
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.activity_detail_mua.*
 import kotlinx.android.synthetic.main.fragment_profile.*
+import java.util.*
 
 class ProfileFragment : Fragment(),LogoutContract.View {
 
@@ -76,6 +79,7 @@ class ProfileFragment : Fragment(),LogoutContract.View {
 
         tvUserLogin.setText(userResponse.name)
         tvEmailUserLogin.setText(userResponse.email)
+        tvTeleponUserLogin.setText(userResponse.noHp)
     }
 
     private fun initListener() {

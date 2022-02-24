@@ -5,6 +5,45 @@
     android:layout_height="match_parent"
     tools:context=".ui.detail.jadwal.JadwalMuaFragment">
 
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivIlustrasiTestimoni"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/ic_online_review_pana" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextView.PoppinsRegular20sp020202"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Opsss!!" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            style="@style/EditText.PoppinsRegular14sp8D92A3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginHorizontal="32dp"
+            android:text="seperinya mua ini belum memiliki testimoni deh :("
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcTestimoniMua"
         android:layout_width="0dp"

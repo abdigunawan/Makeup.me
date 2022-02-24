@@ -25,7 +25,8 @@
 
         <TextView
             android:id="@+id/tvUserLogin"
-            style="@style/TextView.PoppinsRegular18sp020202"
+            style="@style/TextView.PoppinsSemiBold16sp8020202"
+            android:textSize="18dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -47,6 +48,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvUserLogin" />
 
+        <TextView
+            android:id="@+id/tvTeleponUserLogin"
+            style="@style/TextView.PoppinsRegular14sp8D92A3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="abdygunawan023@gmail.com"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmailUserLogin" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,7 +68,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvEmailUserLogin">
+            app:layout_constraintTop_toBottomOf="@+id/tvTeleponUserLogin">
 
 
             <TextView
@@ -287,9 +300,9 @@
                 android:layout_marginEnd="64dp"
                 android:layout_marginBottom="32dp"
                 android:background="@drawable/shape_rectangle_outline_8_fe9bb3"
+                android:fontFamily="@font/poppins"
                 android:text="Log Out"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins"
                 android:textColor="#FE9BB3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

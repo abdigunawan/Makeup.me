@@ -45,7 +45,7 @@ class CustomizeOrderActivity : AppCompatActivity() {
                 var catatan = etCatatan.text.toString()
 
                 if (tanggalacara.isNullOrEmpty()) {
-                    etTanggalAcara.error = "Masukkan Tanggal Ketemu"
+                    etTanggalAcara.error = "Masukkan Tanggal Acara"
                     etTanggalAcara.requestFocus()
                 } else if (jamacara.isNullOrEmpty()) {
                     etJamAcara.error = "Masukkan Jam Acara Dulu"
@@ -108,6 +108,7 @@ class CustomizeOrderActivity : AppCompatActivity() {
                 cal.set(Calendar.MINUTE, i2)
                 val jam = viewformatHour.format(cal.time)
                 sendtime = sendformatHour.format(cal.time)
+
                 etJamAcara.setText(jam)
             }, gethour.get(Calendar.HOUR_OF_DAY),gethour.get(Calendar.MINUTE), true)
 

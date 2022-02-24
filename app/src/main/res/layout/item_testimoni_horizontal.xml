@@ -6,7 +6,7 @@
     app:cardCornerRadius="10dp"
     android:outlineSpotShadowColor="#8D92A3"
     app:cardUseCompatPadding="true"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +40,7 @@
             style="@style/TextView.PoppinsMedium14sp202020"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="Abdi Gunawan"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,37 +51,24 @@
             style="@style/TextView.PoppinsReguler9sp8D92A3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
             android:text="Komentarnya Disini"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rbMua" />
+            app:layout_constraintTop_toBottomOf="@+id/tvPelanggan" />
 
         <TextView
             android:id="@+id/tvtanggalTestimoni"
             style="@style/TextView.PoppinsReguler9sp8D92A3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:text="Tanggal Disini"
-            app:layout_constraintBottom_toTopOf="@+id/tvKomentar"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPelanggan"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/rbMua"
+            app:layout_constraintTop_toTopOf="@+id/tvPelanggan"
             app:layout_constraintVertical_bias="0.0" />
-
-        <RatingBar
-            android:id="@+id/rbMua"
-            style="@style/Widget.AppCompat.RatingBar.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="8dp"
-            android:theme="@style/RatingBar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPelanggan" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

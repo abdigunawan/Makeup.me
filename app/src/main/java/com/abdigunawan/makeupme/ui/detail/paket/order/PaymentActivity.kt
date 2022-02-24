@@ -2,6 +2,7 @@ package com.abdigunawan.makeupme.ui.detail.paket.order
 
 import android.app.Dialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import com.abdigunawan.makeupme.Makeupme
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.response.home.paket.Paket
 import com.abdigunawan.makeupme.model.response.login.User
+import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
 import com.abdigunawan.makeupme.ui.home.HomeFragment
 import com.abdigunawan.makeupme.utils.Helpers.formatPrice
 import com.bumptech.glide.Glide
@@ -29,7 +31,6 @@ class PaymentActivity : AppCompatActivity(), PaymentContract.View {
     lateinit var kirimtanggal : String
     lateinit var kirimjam : String
     lateinit var catatan : String
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -106,15 +107,8 @@ class PaymentActivity : AppCompatActivity(), PaymentContract.View {
     }
 
     override fun onPaymentSuccess(message: String) {
-        SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
-            .setTitleText("SUKSES")
-            .setContentText(message)
-            .setConfirmClickListener(SweetAlertDialog.OnSweetClickListener() {
-                it.dismissWithAnimation()
-                val home = Intent(this, com.abdigunawan.makeupme.ui.MainActivity::class.java)
-                startActivity(home)
-            })
-            .show()
+        val success = Intent(this, PaymentSuccessActivity::class.java)
+        startActivity(success)
     }
 
     override fun onPaymentFailed(message: String) {

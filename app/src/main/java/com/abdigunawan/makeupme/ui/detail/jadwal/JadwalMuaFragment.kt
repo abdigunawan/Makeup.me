@@ -1,5 +1,6 @@
 package com.abdigunawan.makeupme.ui.detail.jadwal
 
+import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,11 +11,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abdigunawan.makeupme.R
 import com.abdigunawan.makeupme.model.dummy.MuaJadwalModel
+import com.abdigunawan.makeupme.model.response.home.jadwal.HomeJadwalResponse
+import com.abdigunawan.makeupme.model.response.home.jadwal.Jadwal
+import com.abdigunawan.makeupme.ui.detail.DetailMuaActivity
+import com.abdigunawan.makeupme.ui.detail.testimoni.TestimoniPresenter
 import kotlinx.android.synthetic.main.fragment_jadwal_mua.*
 
-class JadwalMuaFragment : Fragment(),JadwalMuaAdapter.ItemAdapterCallback {
+class JadwalMuaFragment : Fragment(),JadwalMuaAdapter.ItemAdapterCallback, JadwalContract.View {
 
-    private var menuArrayList : ArrayList<MuaJadwalModel> = ArrayList()
+    private var adapter : JadwalMuaAdapter? = null
+    var progressDialog: Dialog? = null
+    private lateinit var presenter: JadwalPresenter
+    private lateinit var getData: String
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,26 +36,41 @@ class JadwalMuaFragment : Fragment(),JadwalMuaAdapter.ItemAdapterCallback {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        initDataDummy()
-        var adapter = JadwalMuaAdapter(menuArrayList, this)
+        val activity: DetailMuaActivity? = activity as DetailMuaActivity?
+        getData = activity!!.sendDataId()
+
+        presenter = JadwalPresenter(this)
+        presenter.getJadwal(getData)
+    }
+
+    override fun onClick(v: View, data: Jadwal) {
+    }
+
+    override fun onJadwalSuccess(homeJadwalResponse: HomeJadwalResponse) {
+        var adapter = JadwalMuaAdapter(homeJadwalResponse.jadwal, this)
         var layoutManager : RecyclerView.LayoutManager = LinearLayoutManager(activity)
         rcJadwalMua.layoutManager = layoutManager
         rcJadwalMua.adapter = adapter
+
+        if (homeJadwalResponse.jadwal.isNullOrEmpty()) {
+            rcJadwalMua.visibility = View.GONE
+            ll_empty.visibility = View.VISIBLE
+        } else {
+            rcJadwalMua.visibility = View.VISIBLE
+            ll_empty.visibility = View.GONE
+        }
     }
 
-    fun initDataDummy() {
-        menuArrayList = ArrayList()
-        menuArrayList.add(MuaJadwalModel("Natalya Tolla", "Paket Wisuda", "", "Daya, Paccerakkang", "9 Nov, 13.00-14.00"))
-        menuArrayList.add(MuaJadwalModel("Adella Dewi", "Paket Nikah", "", "Perintis Kemerdekaan 7", "10 Nov, 9.00-12.00"))
-        menuArrayList.add(MuaJadwalModel("Nurul Fadillah", "Paket Nikah","", "Jalan Poros Bone Makassar","10 Nov, 13.00-14.00"))
-        menuArrayList.add(MuaJadwalModel("Natalya Tolla", "Paket Wisuda", "", "Daya, Paccerakkang", "9 Nov, 13.00-14.00"))
-        menuArrayList.add(MuaJadwalModel("Adella Dewi", "Paket Nikah", "", "Perintis Kemerdekaan 7","10 Nov, 9.00-12.00"))
-        menuArrayList.add(MuaJadwalModel("Nurul Fadillah", "Paket Nikah" ,"", "Jalan Poros Bone Makassar", "10 Nov, 13.00-14.00"))
-
+    override fun onJadwalFailed(message: String) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 
-    override fun onClick(v: View, data: MuaJadwalModel) {
-        Toast.makeText(context, "Ini menu yang kamu klik "+ data.pelanggan, Toast.LENGTH_SHORT).show()
+    override fun showLoading() {
+        progressDialog?.show()
+    }
+
+    override fun dismissLoading() {
+        progressDialog?.dismiss()
     }
 
 }

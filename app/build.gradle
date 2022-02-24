@@ -36,7 +36,7 @@ android {
     productFlavors {
         dev {
             applicationId = "com.abdigunawan.makeupme.dev"
-            buildConfigField "String", "BASE_URL", "\"http://10.153.48.28:8000/\""
+            buildConfigField "String", "BASE_URL", "\"http://192.168.137.136:8000/\""
         }
     }
     buildFeatures {

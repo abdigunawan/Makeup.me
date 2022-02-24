@@ -18,6 +18,9 @@ data class Transaksi(
     @SerializedName("id_user")
     val idUser: Int,
     @Expose
+    @SerializedName("id_tukang")
+    val idTukang: Int,
+    @Expose
     @SerializedName("jam_acara")
     val jamAcara: String,
     @Expose
