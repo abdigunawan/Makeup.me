@@ -44,9 +44,9 @@ class SectionsPagerAdapter(fm: FragmentManager) :
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position) {
             0 -> "Pending"
-            1 -> "DiKonfirmasi"
+            1 -> "Konfirmasi"
             2 -> "Selesai"
-            3 -> "Dibatalkan"
+            3 -> "Batal"
             else -> null
         }
     }

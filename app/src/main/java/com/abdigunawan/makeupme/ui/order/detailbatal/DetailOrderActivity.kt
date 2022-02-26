@@ -29,7 +29,6 @@ class DetailOrderActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_order)
 //        presenter = FinishOrderPresenter(this)
         initToolbar()
-        initListener()
         initDetail()
         initView()
     }
@@ -56,7 +55,7 @@ class DetailOrderActivity : AppCompatActivity() {
         val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
         val simpleHourFormat = SimpleDateFormat("hh:mm:ss")
 
-        tvTitle.text = detailtransaksi.transaksiuser.produk
+        tvTitle.text = detailtransaksi.transaksiuser.namaPaket
         tvPrice.formatPrice(detailtransaksi.transaksiuser.harga.toString())
         textView15.text = detailtransaksi.jumlah
         tvTotal.formatPrice(detailtransaksi.totalHarga)
@@ -71,12 +70,6 @@ class DetailOrderActivity : AppCompatActivity() {
         tvCatatan.text = detailtransaksi.catatan
         tvStatus.text = detailtransaksi.status
 
-        if (detailtransaksi.status.equals("PENDING")) {
-            btnTestimoni.isVisible = true
-        } else if (detailtransaksi.status.equals("DIBATALKAN")) {
-            btnTestimoni.isVisible = false
-        }
-
         if (detailtransaksi.status.equals("DIBATALKAN")) {
             tvStatus.setTextColor(Color.RED)
         }
@@ -86,23 +79,6 @@ class DetailOrderActivity : AppCompatActivity() {
             .load(fotopaket)
             .apply(RequestOptions.centerCropTransform())
             .into(ivPoster)
-
-    }
-
-    private fun initListener() {
-
-        btnTestimoni.setOnClickListener {
-            SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-                .setTitleText("Yakin!!!")
-                .setContentText("Kamu Yakin Booking ini udah selesai?")
-                .setCancelButton("Batal", SweetAlertDialog.OnSweetClickListener {
-                    it.dismissWithAnimation()
-                })
-                .setConfirmButton("Yakin", SweetAlertDialog.OnSweetClickListener {
-//                    presenter.finishOrder(detailtransaksi.id.toString())
-                })
-                .show()
-        }
 
     }
 

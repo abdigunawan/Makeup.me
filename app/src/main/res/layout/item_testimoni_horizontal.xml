@@ -17,7 +17,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
             android:layout_width="match_parent"
-            android:layout_height="134dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:elevation="10dp"
             android:outlineSpotShadowColor="@color/white"
@@ -67,7 +67,6 @@
             android:text="Tanggal Disini"
             app:layout_constraintBottom_toBottomOf="@+id/tvPelanggan"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvPelanggan"
             app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
