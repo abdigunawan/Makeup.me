@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:layout_marginHorizontal="32dp"
-            android:text="belum ada booking terbaru sekarang"
+            android:text="belum ada booking yang perlu di konfirmasi sih"
             android:textAlignment="center" />
 
     </LinearLayout>
